@@ -32,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * sms test module
      *
-     * @param user new network user
+     *
      */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         number = findViewById(R.id.inputnumber);
         message = findViewById(R.id.inputmessage);
         send = findViewById(R.id.sendbutton);
+
+        /**
+         * enables send button if android permission granted
+         * else disactivate send button until permissions granted
+         */
 
         send.setEnabled(false);
         if(checkPermission(Manifest.permission.SEND_SMS)){
