@@ -7,15 +7,16 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical">
 
-**
-*
-* Edited to be reviewed
-* free space to review comments
-*
-*
-*
-* @author Group 1
-*/
+    /**
+    *
+    * Edited to be reviewed
+    * free space to review comments
+    *
+    *
+    *
+    * @author Group 1
+    */
+
 
 <EditText
     android:id="@+id/inputnumber"
