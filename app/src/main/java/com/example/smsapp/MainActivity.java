@@ -14,11 +14,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ *
+ * Edited to be reviewed
+ * free space to review comments
+ *
+ *
+ *
+ * @author Group 1
+ */
+
 public class MainActivity extends AppCompatActivity {
     final int SEND_SMS_PERMISSION_REQUEST_CODE=1;
     EditText message;
     EditText number;
     Button send;
+    /**
+     * sms test module
+     *
+     * @param user new network user
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    /**
+     *  sends the sms to the reciver
+     *
+     * @param  view messaggio da inviare
+     */
     public void onSend(View V){
         String phonenumber = number.getText().toString();
         String smsmessage = message.getText().toString();
@@ -53,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    /**
+     * checks if permissions granted
+     *
+     * @param permission
+     * @return true if android sms permissions granted
+     */
     public boolean checkPermission (String permission){
         int check = ContextCompat.checkSelfPermission(this,permission);
         return (check == PackageManager.PERMISSION_GRANTED);
